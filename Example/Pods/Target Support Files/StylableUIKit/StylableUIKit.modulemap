@@ -1,0 +1,6 @@
+framework module StylableUIKit {
+  umbrella header "StylableUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

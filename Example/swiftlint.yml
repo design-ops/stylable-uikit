@@ -1,0 +1,57 @@
+excluded:
+  - Pods/
+
+included:
+  - ../StylableUIKit
+
+disabled_rules:
+  - todo
+  - discarded_notification_center_observer
+  - duplicate_imports
+
+opt_in_rules:
+  - private_outlet
+
+identifier_name:
+  excluded:
+    - id
+
+line_length: 160
+
+large_tuple: 3
+
+### When we started consistently formatting our RxSwift, we hit these limits pretty quickly. We don't want to disable them completely, but we do want to
+### acknowledge that we do write verbose RxSwift code.
+
+function_body_length:
+  warning: 100
+
+file_length:
+  warning: 1000
+
+type_body_length:
+  warning: 300
+
+### Some rules we made up ourselves
+
+custom_rules:
+  parenthesis_spacing:
+    included: ".*.swift"
+    name: "There should be no spacing inside parenthesis"
+    regex: "\\( | \\)"
+    message: "Prefer (arg) vs ( arg )"
+    match_kinds:
+      - argument
+      - attribute.builtin
+      - attribute.id
+      - buildconfig.id
+      - buildconfig.keyword
+      - identifier
+      - keyword
+      - number
+      - objectliteral
+      - parameter
+      - placeholder
+      - string
+      - string_interpolation_anchor
+      - typeidentifier

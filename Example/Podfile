@@ -1,0 +1,15 @@
+use_frameworks!
+platform :ios, '10.0'
+
+target 'StylableUIKit_Example' do
+  pod 'StylableUIKit/Core',    :path => '../'
+  pod 'StylableUIKit/Lottie', :path => '../'
+
+  pod 'SwiftLint'
+
+  target 'StylableUIKit_Tests' do
+    inherit! :search_paths
+
+    pod 'iOSSnapshotTestCase', '~> 6.0'
+  end
+end
